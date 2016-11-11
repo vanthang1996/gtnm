@@ -5,23 +5,20 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/admin.css">
 		<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
-		
-		
 	</head>
 	<body>
 	<div id="taskbar">
-				<ul>
-					<li><a href=""><span class="fa fa-user"></span></a>
-					<ul class="submenu">
-						<li><a href="">Profile</a></li>
-						<li><a href="">Edit Profile</a></li>
-						<li><a href="">Logout</a></li>
-					</ul>
-
-					</li>
-					<li><a href=""><span class="fa fa-bell"></span></a></li>
+			<ul>
+				<li><a href="profile.html"><span class="fa fa-user"></span></a>
+				<ul class="submenu">
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="editProfile.html">Edit Profile</a></li>
+					<li><a href="">Logout</a></li>
 				</ul>
-			</div>
+			</li>
+			<li><a href=""><span class="fa fa-bell"></span></a></li>
+		</ul>
+	</div>
 		<div id="wrapper">
 			<aside class="main-sidebar">
 				<!--user avatar -->
@@ -37,13 +34,26 @@
 				<div id="nav">
 					<ul class="sidebar-menu">
 						<!-- exercise -->
-						<li><a href="manageProduct.html"><span class="fa fa-laptop">&nbsp;&nbsp;&nbsp;Quản lý sản phẩm</a></li>
+						<li><a href="manageProduct.html"><span class="fa fa-laptop">&nbsp;&nbsp;&nbsp;Quản lý sản phẩm</a>
+						<ul>
+							<li><a href="manageCompany.html">Quản lý hãng</a></li>
+							<li><a href="productType.html">Quản lý loại sản phẩm</a></li>
+							<li><a href="nhapKho.html">Nhập kho</a></li>
+							<li><a href="xuatKho.html">Xuất kho</a></li>
+						</ul>
+						</li>
 						<!-- Education -->
-						<li><a href="manageAccount.html"><span class="fa fa-user">&nbsp;&nbsp;&nbsp;Quản lý tài khoản</a></li>
+						<li><a href="manageAccount.html"><span class="fa fa-user">&nbsp;&nbsp;&nbsp;Quản lý tài khoản</a>
+						</li>
 						<!-- Skill -->
 						<li><a href="manageCustomer.html"><span class="fa fa-users">&nbsp;&nbsp;&nbsp;Quản lý khách hàng</a></li>
 						<!-- Contact -->
-						<li><a href="doanhthu.html"><span class="fa fa-money">&nbsp;&nbsp;&nbsp;Quản lý doanh thu</a></li>
+						<li><a href="doanhthu.html"><span class="fa fa-money">&nbsp;&nbsp;&nbsp;Quản lý doanh thu</a>
+						<ul>
+							<li><a href="thongKeLoaiSanPham.html">Thống kê theo sản phẩm</a></li>
+							<li><a href="thongKeDoanhThu.html">Thống kê theo doanh thu</a></li>
+						</ul>
+						</li>
 						<li><a href="" style="display: none;"><span class="fa fa-lock">&nbsp;&nbsp;&nbsp;Quản trị Admin</a></li>
 					</ul>
 				</div>
@@ -55,6 +65,24 @@
 					<input placeholder="Search" >
 					<button>Import</button>
 					<button>Export</button>
+					<div class="product-type">
+					Loại  sản phẩm: 
+						<select>
+						<option>Desktop</option>
+						<option>Laptop</option>
+					</select>
+					</div>
+					<div class="company">
+					Hãng: 
+						<select>
+						<option>Apple</option>
+						<option>Asus</option>
+						<option>Acer</option>
+						<option>Dell</option>
+						<option>Lenovo</option>
+						<option>HP</option>
+					</select>
+					</div>
 				</div>
 				<div class="datagrid">
 					<table class="t" id="t">
@@ -62,18 +90,16 @@
 							<tr>
 							<th>STT</th>
 								<th>Id</th>
-								<th>Tên sản phẩm</th>
-								<th>Loại sp</th>
-								<th>Mô tả tóm tắt</th>
-								<th>Mô tả chi tiết</th>
+								<th>Tên sp</th>
+								<th>Số lượng</th>
+								<th>Mô tả</th>
 								<th>Hãng</th>
 								<th>Giá</th>
 								<th>Sale</th>
-								<th>Hình ảnh</th>
-								<th>Sản phẩm mới</th>
+								<th>Ảnh</th>
+								<th>SP mới</th>
 								<th>Ngày tạo</th>
 								<th>Hết hàng</th>
-								<th>Số lượng</th>
 								<th>&nbsp;</th>
 							</tr>
 						</thead>
@@ -84,8 +110,6 @@
 							<td colspan="15">
 								<div id="paging">
 									<ul>
-										<li>Show: <input type="text" name="show" style="width: 30px"></li>
-										<li>Page: <input type="text" name="page" style="width: 30px"></li>
 										<li><a href="#"><span>Previous</span></a></li>
 										<li><a href="#"class="active"><span>1</span></a></li>
 										<li><a href="#"><span>2</span></a></li>
