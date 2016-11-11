@@ -2,8 +2,7 @@ var products = [{
     "stt": "01",
     "id": "01",
     "productName": "Macbook Pro Retina - MC975",
-    "productType": "Laptop",
-    "shortDescription": "",
+    "amount":"100",
     "detail": {
         // vi xu ly
         "CPU": "Intel Core i7",
@@ -42,15 +41,13 @@ var products = [{
     "image": ["img/mac/01/01.png", "img/mac/01/02.jpg", "img/mac/01/03.jpg", "img/mac/01/04.jpg", "img/mac/01/05.jpg", "img/mac/01/06.jpg"],
     "newProduct": "yes",
     "dateCreate": "29/10/2016",
-    "soldOut": "no",
-    "amount":"100"
+    "soldOut": "no"
 },
 {
     "stt": "01",
     "id": "01",
     "productName": "Macbook Pro Retina - MC975",
-    "productType": "Laptop",
-    "shortDescription": "",
+    "amount":"100",
     "detail": {
         // vi xu ly
         "CPU": "Intel Core i7",
@@ -89,15 +86,13 @@ var products = [{
     "image": ["img/mac/01/01.png", "img/mac/01/02.jpg", "img/mac/01/03.jpg", "img/mac/01/04.jpg", "img/mac/01/05.jpg", "img/mac/01/06.jpg"],
     "newProduct": "yes",
     "dateCreate": "29/10/2016",
-    "soldOut": "no",
-    "amount":"100"
+    "soldOut": "no"
 },
 {
     "stt": "01",
     "id": "01",
     "productName": "Macbook Pro Retina - MC975",
-    "productType": "Laptop",
-    "shortDescription": "",
+    "amount":"100",
     "detail": {
         // vi xu ly
         "CPU": "Intel Core i7",
@@ -136,15 +131,13 @@ var products = [{
     "image": ["img/mac/01/01.png", "img/mac/01/02.jpg", "img/mac/01/03.jpg", "img/mac/01/04.jpg", "img/mac/01/05.jpg", "img/mac/01/06.jpg"],
     "newProduct": "yes",
     "dateCreate": "29/10/2016",
-    "soldOut": "no",
-    "amount":"100"
+    "soldOut": "no"
 },
 {
     "stt": "01",
     "id": "01",
     "productName": "Macbook Pro Retina - MC975",
-    "productType": "Laptop",
-    "shortDescription": "",
+    "amount":"100",
     "detail": {
         // vi xu ly
         "CPU": "Intel Core i7",
@@ -183,8 +176,7 @@ var products = [{
     "image": ["img/mac/01/01.png", "img/mac/01/02.jpg", "img/mac/01/03.jpg", "img/mac/01/04.jpg", "img/mac/01/05.jpg", "img/mac/01/06.jpg"],
     "newProduct": "yes",
     "dateCreate": "29/10/2016",
-    "soldOut": "no",
-    "amount":"100"
+    "soldOut": "no"
 }];
 
 function init() {
@@ -225,16 +217,16 @@ function showProduct() {
             else {
                 var col = document.createElement('td');
                 if(products[i][p] == 'no' || products[i][p] == 'yes'){
-                	var check = document.createElement('input');
-                	check.type='checkbox';
-                	if(products[i][p] == 'no')
-                		check.checked = false;
-                	else
-                		check.checked = true;
-                	col.appendChild(check);
+                    var check = document.createElement('input');
+                    check.type='checkbox';
+                    if(products[i][p] == 'no')
+                        check.checked = false;
+                    else
+                        check.checked = true;
+                    col.appendChild(check);
                 }
                 else{
-                	col.textContent = products[i][p];
+                    col.textContent = products[i][p];
                 }
                 row.appendChild(col);
             }

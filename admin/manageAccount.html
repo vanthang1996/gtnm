@@ -10,10 +10,10 @@
 	<body>
 		<div id="taskbar">
 			<ul>
-				<li><a href=""><span class="fa fa-user"></span></a>
+				<li><a href="profile.html"><span class="fa fa-user"></span></a>
 				<ul class="submenu">
-					<li><a href="">Profile</a></li>
-					<li><a href="">Edit Profile</a></li>
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="editProfile.html">Edit Profile</a></li>
 					<li><a href="">Logout</a></li>
 				</ul>
 			</li>
@@ -33,18 +33,31 @@
 			</div>
 			<!-- sidebar menu -->
 			<div id="nav">
-				<ul class="sidebar-menu">
-					<!-- exercise -->
-					<li><a href="manageProduct.html"><span class="fa fa-laptop">&nbsp;&nbsp;&nbsp;Quản lý sản phẩm</a></li>
-					<!-- Education -->
-					<li><a href="manageAccount.html"><span class="fa fa-user">&nbsp;&nbsp;&nbsp;Quản lý tài khoản</a></li>
-					<!-- Skill -->
-					<li><a href="manageCustomer.html"><span class="fa fa-users">&nbsp;&nbsp;&nbsp;Quản lý khách hàng</a></li>
-					<!-- Contact -->
-					<li><a href="doanhthu.html"><span class="fa fa-money">&nbsp;&nbsp;&nbsp;Quản lý doanh thu</a></li>
-					<li><a href="" style="display: none;"><span class="fa fa-lock">&nbsp;&nbsp;&nbsp;Quản trị Admin</a></li>
-				</ul>
-			</div>
+					<ul class="sidebar-menu">
+						<!-- exercise -->
+						<li><a href="manageProduct.html"><span class="fa fa-laptop">&nbsp;&nbsp;&nbsp;Quản lý sản phẩm</a>
+						<ul>
+							<li><a href="manageCompany.html">Quản lý hãng</a></li>
+							<li><a href="productType.html">Quản lý loại sản phẩm</a></li>
+							<li><a href="nhapKho.html">Nhập kho</a></li>
+							<li><a href="xuatKho.html">Xuất kho</a></li>
+						</ul>
+						</li>
+						<!-- Education -->
+						<li><a href="manageAccount.html"><span class="fa fa-user">&nbsp;&nbsp;&nbsp;Quản lý tài khoản</a>
+						</li>
+						<!-- Skill -->
+						<li><a href="manageCustomer.html"><span class="fa fa-users">&nbsp;&nbsp;&nbsp;Quản lý khách hàng</a></li>
+						<!-- Contact -->
+						<li><a href="doanhthu.html"><span class="fa fa-money">&nbsp;&nbsp;&nbsp;Quản lý doanh thu</a>
+						<ul>
+							<li><a href="thongKeLoaiSanPham.html">Thống kê theo sản phẩm</a></li>
+							<li><a href="thongKeDoanhThu.html">Thống kê theo doanh thu</a></li>
+						</ul>
+						</li>
+						<li><a href="" style="display: none;"><span class="fa fa-lock">&nbsp;&nbsp;&nbsp;Quản trị Admin</a></li>
+					</ul>
+				</div>
 		</aside>
 		<section class="main-content" id="main-content">
 			
